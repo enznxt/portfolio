@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Enzo | Portfolio{% endblock %}</title>
+
+    <link rel="stylesheet" href="../../static/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">
+        <span>EG</span> Enzo Angelo Gabituze
+    </a>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About Me</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <h3>Enzo Angelo Gabituze</h3>
+    <p>Student | Aspiring Software Developer</p>
+
+    <div class="social-links">
+        <a href="https://github.com/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="{% url 'contact' %}">
+            <i class="fa-regular fa-envelope"></i> Contact
+        </a>
+    </div>
+
+    <p class="copyright">Build. Learn. Grow.</p>
+</footer>
+
+</body>
+</html>
